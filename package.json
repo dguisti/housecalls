@@ -1,0 +1,17 @@
+{
+  "name": "housecalls",
+  "version": "1.0.0",
+  "description": "Official website for House Calls Ltd.",
+  "main": "public/index.html",
+  "scripts": {
+    "dev": "parcel src/index.html --out-dir public",
+    "build": "parcel build src/index.html --out-dir public"
+  },
+  "keywords": [],
+  "author": "Dallin Guisti",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.46.0"
+  }
+}

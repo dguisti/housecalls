@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051) -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="icon.png">
+
+    <title>Photography Site Example | Homepage</title>
+    
+    <!-- Bootstrap core CSS 
+    <link href="./index_files/bootstrap.min.css" rel="stylesheet">-->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <!-- Custom styles for this template -->
+    <link href="./index_files/product.css" rel="stylesheet">
+
+    <script>
+      
+      $(document).ready(function(){
+  
+        var folder = "images/";
+  
+        $.ajax({
+            url : folder,
+            success: function (data) {
+                $(data).find("a").attr("href", function (i, val) {
+                    if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                        $("body").append( "<img src='"+ folder + val +"'>" );
+                    } 
+                });
+            }
+        });
+  
+      });
+      
+      
+      
+    </script>
+
+
+  </head>
+
+  <body cz-shortcut-listen="true" onscroll="navchange();">
+
+    <nav class="navbar navbar-expand-lg site-header fixed-top py-1 bg-transparent navbar-dark" id="navigation">
+      <div class="container d-block mx-auto justify-content-between">
+        <a href="index.html" class="d-none navbar-brand">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-inline"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+        </a>
+     <button class="navbar-toggler d-inline d-xl-none d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon text-white"></span>
+      </button>
+		  <div class="container d-xl-inline-block justify-content-center collapse navbar-collapse navbar-nav mr-auto d-none" id="navbarSupportedContent">
+        <a href="index.html" class="d-inline-block navbar-brand">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-inline"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+        </a>
+        <a class="py-2 d-inline-block ml-3" href="index.html">Home</a>
+		<a class="py-2 d-inline-block ml-3" href="#">Pricing</a>
+        <a class="py-2 d-inline-block ml-3" href="#">Support</a>
+        <div><a class="dropdown-toggle py-2 d-inline-block ml-3 active" href="#" id="galleries" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Galleries
+        </a>
+        <div class="dropdown-menu" aria-labelledby="galleries">
+          <a class="dropdown-item active" href="#">Gallery 1 <span class="badge badge-secondary">New</span></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Gallery 2</a>
+          <a class="dropdown-item" href="#">Gallery 3</a>
+          <a class="dropdown-item" href="#">Gallery 4</a>
+        </div></div>
+        <a class="py-2 d-inline-block ml-3" href="#">About</a>
+		<a class="py-2 d-inline-block btn btn-warning text-white p-2 ml-3 float-right" href="#" style="border-radius: 20px;">Contact Me</a>
+			  </div>
+      </div>
+    </nav>
+    <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-light d-flex align-items-center img-fluid" id="cover">
+      <div class="col-xl-5 mx-auto my-auto bg-light rounded p-5">
+        <h1 class="display-4 font-weight-normal">Gallery</h1>
+        <p class="lead font-weight-normal">Welcome to my gallery! Here you can view my previous photos! Click the button below to get started!</p>
+        <a class="btn btn-outline-primary" href="#gallery">Get Started</a>
+      </div>
+ 
+    </div>
+	  <br>
+
+    <!-- Gallery Starts Here -->
+    <div id="gallery">
+
+      
+
+
+    </div>
+
+
+
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+          <small class="d-block mb-3 text-muted">© 2017-2019 Business Name</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Links</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Speed</a></li>
+            <li><a class="text-muted" href="#">Collaboration</a></li>
+            <li><a class="text-muted" href="#">Variety</a></li>
+            <li><a class="text-muted" href="#">Customizable</a></li>
+            <li><a class="text-muted" href="#">Portable</a></li>
+ 
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Info</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Resource</a></li>
+            <li><a class="text-muted" href="#">Resource name</a></li>
+            <li><a class="text-muted" href="#">Another resource</a></li>
+            <li><a class="text-muted" href="#">Final resource</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Team</a></li>
+            <li><a class="text-muted" href="#">Locations</a></li>
+            <li><a class="text-muted" href="#">Privacy</a></li>
+            <li><a class="text-muted" href="#">Terms</a></li>
+          </ul>
+        </div>
+	  <div class="col-6 col-md">
+	  <h5>Other</h5>
+	  <ul class="list-unstyled text-small">
+		<li><a class="text-muted" href="#">Business</a></li>
+		<li><a class="text-muted" href="#">Education</a></li>
+		<li><a class="text-muted" href="#">Government</a></li>
+		<li><a class="text-muted" href="#">Gaming</a></li>
+	  </ul>
+	</div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster 
+    <script src="./index_files/jquery-3.3.1.slim.min.js.download" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="./index_files/popper.min.js.download"></script>
+    <script src="./index_files/bootstrap.min.js.download"></script> -->
+    <script src="./index_files/holder.min.js.download"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+	  <!--Navbar Scripts-->
+	  <script>
+
+	var navchange = function()
+	{
+		if (window.scrollY > 50)
+		{
+			document.getElementById('navigation').classList.remove("bg-transparent");
+			document.getElementById('navigation').classList.add("bg-dark");
+			document.getElementById('navigation').classList.add("shadow-lg");
+		}
+		else
+		{
+			document.getElementById('navigation').classList.add("bg-transparent");
+			document.getElementById('navigation').classList.remove("bg-dark");
+			document.getElementById('navigation').classList.remove("shadow-lg");
+		}
+	}
+
+  </script>
+  
+
+</body></html>

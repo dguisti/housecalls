@@ -1,0 +1,17 @@
+body,
+html {
+  height: 100%;
+}
+
+#cover {
+  /* The image used */
+  background-image: url("/cover.383c47f9.webp");
+  background-attachment: fixed;
+  /* Full size and config */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=/_home.774c070e.css.map */

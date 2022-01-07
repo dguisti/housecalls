@@ -1,0 +1,109 @@
+.container {
+  max-width: 960px;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(150%) blur(5px);
+  backdrop-filter: saturate(150%) blur(5px);
+}
+/*Non-active links on scroll*/ 
+.site-header a, site-header svg {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+/*Non-active links one scroll when hovered over*/
+.site-header a:hover {
+  color: #E0E0E0;
+  text-decoration: none;
+}
+/*Active links on scroll*/
+.site-header a.active {
+	color: white;
+}
+
+/*Non-active links before scroll*/
+.site-header.bg-transparent a {
+	color: #141414;
+}
+/*Non-active links before scroll when hovered over*/
+.site-header.bg-transparent a:hover {
+	color: #4D3F3F;
+}
+/*Active links before scroll*/
+.site-header.bg-transparent a.active {
+	color: black;
+	font-weight: 500;
+	mix-blend-mode: difference;
+}
+.site-header.bg-transparent a.active:hover { /*To insure not following other hover styles*/
+	color: black;
+	font-weight: 500;
+	mix-blend-mode: difference;
+}
+/*Svg before scroll*/
+.site-header.bg-transparent a svg {
+	color: black;
+	mix-blend-mode: difference;
+}
+/*Svg before scroll when hovered over*/
+.site-header.bg-transparent a:hover svg {
+	color: #202020;
+	mix-blend-mode: difference;
+}
+
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.overflow-hidden { overflow: hidden; }
+
+body, html {
+			  height: 100%;
+		  }
+		  
+#cover {
+   /* The image used */
+  background-image: url('../cover.jpg');
+  background-attachment: fixed;
+
+  /* Full size and config */
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#navigation {
+  transition: background-color 0.75s, color 0.75s, box-shadow .5s;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (min-width: 992px) {
+	div.mr-md-3.text-center {
+		border-radius: 10px;
+	}
+}
+
+img.img-fluid {
+	border-radius: 3px;
+}

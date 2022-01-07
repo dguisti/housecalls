@@ -1,0 +1,202 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/vars" as *;
+/*  =================
+    Table of Contents
+    ================= 
+
+    1. Variables
+      1.1 Nav variables
+    2. Navbar
+    3. Footer
+
+   */
+
+/*  =========
+    Variables
+    ========= */
+
+/* --- Nav variables --- */
+
+// Logo
+$logo-height: 60px;
+
+// Border styles
+$nav-border: 1px solid lightgray;
+
+// Animations
+$nav-transition: 0.4s ease-in-out;
+$border-transition: 0.25s ease-in-out;
+
+// Padding
+$nav-padding-primary: 7px;
+$nav-padding-secondary: 7px;
+
+// Height
+$nav-height-primary: auto;
+$nav-height-secondary: $logo-height + $nav-padding-secondary * 2;
+
+/*  ======
+    Navbar
+    ====== */
+
+nav {
+  /* Root Styles */
+
+  // Allow bars to span full screen
+  display: block !important;
+
+  // Coloring settings
+  border-bottom: $nav-border;
+  background-color: $colors-nav-bg-0_975;
+
+  // Transition
+  transition: background-color $nav-transition;
+
+  @include mq-lg() {
+    // Large screens
+    background-color: $colors-nav-bg-0_9;
+  }
+
+  .container-fluid {
+    // Fluid containers (top and bottom nav bars)
+    &.primary {
+      /* --- Primary (bottom) container --- */
+
+      // Padding
+      padding-top: $nav-padding-primary;
+      padding-bottom: $nav-padding-primary;
+
+      // Text Align
+      text-align: center;
+
+      .navbar-collapse {
+        // Center inner nav container content
+        justify-content: center;
+      }
+
+      .navlogo-primary {
+        // Primary navbar logo
+
+        // Initial height of 0 (for mobile + top of page)
+        height: 0px;
+
+        // Transition
+        transition: height $nav-transition;
+
+        // Stay on left edge
+        @include on-edge(left);
+
+        // Valign inner image
+        img {
+          vertical-align: text-top;
+        }
+      }
+
+      .dropdown-menu {
+        // Dropdown styles
+
+        // Use default border radius
+        border-radius: $border-radius;
+
+        @include box-pop; // Pop from page
+
+        // 90% Transparency at top
+        background-color: $colors-nav-bg-0_9;
+      }
+    }
+
+    &.secondary {
+      /* Secondary (top) container */
+
+      // Flexbox, center
+      display: flex;
+      justify-content: center;
+
+      // Set height and transition
+      height: $nav-height-secondary;
+      transition: height $nav-transition, border-width $border-transition;
+
+      // Default no border (on small devices)
+      border-width: 0;
+
+      @include mq-lg() {
+        // Border separator on large devices
+        border-bottom: $nav-border;
+      }
+
+      .navlogo-secondary {
+        /* Make height of logo height of container - padding (logo-height)
+        Intended to scale if logo height is deprecated in the future */
+        height: calc(100% - 2 * $nav-padding-secondary);
+      }
+
+      .navbar-toggler {
+        // Toggler hamburger menu
+
+        // Align left
+        @include on-edge(left);
+
+        &:focus {
+          // Styles when focused
+
+          // Purge ugly styles
+          text-decoration: none;
+          outline: 0;
+          box-shadow: none;
+          // Noticeable color change
+          background-color: #faf8f8;
+        }
+      }
+    }
+  }
+
+  &.expanded .container-fluid.secondary {
+    /* Secondary (top) container */
+
+    // Dividing border when container is expanded
+    border-bottom: $nav-border;
+  }
+
+  &.navbar-scrolled {
+    @include mq-lg() {
+      box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+      background-color: $colors-nav-bg-0_97;
+    }
+
+    .container-fluid {
+      &.primary {
+        /* Primary (bottom) container */
+        @include mq-lg() {
+        }
+        .navlogo-primary {
+          @include mq-lg() {
+            height: $logo-height;
+          }
+        }
+
+        .dropdown-menu {
+          background-color: $colors-nav-bg-0_97;
+        }
+      }
+
+      &.secondary {
+        /* Secondary (top) container */
+        @include mq-lg() {
+          border-width: 0;
+          height: 0;
+        }
+      }
+    }
+  }
+}
+
+/*  ======
+    Footer
+    ====== */
+
+footer img {
+  max-width: 15vw;
+  display: block;
+  margin: auto 0;
+}
