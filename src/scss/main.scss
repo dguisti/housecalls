@@ -6,7 +6,9 @@
 @use "util/class_colors";
 
 @use "base/reset";
+@use "base/typography";
 
-@use "layout/navigation.scss";
+@use "layout/navigation";
+@use "layout/grid";
 
 @use "components/btns";

@@ -1,4 +1,4 @@
-var navbarChange = function () {
+function navbarChange() : void{
     if (window.scrollY > 50) {
         document.getElementById('navbar').classList.add("navbar-scrolled");
     }
@@ -7,15 +7,15 @@ var navbarChange = function () {
     }
 }
 
-function navbarCollapse() {
+function navbarCollapse(): void {
     nav.classList.remove("expanded");
 }
 
-function navbarExpand() {
+function navbarExpand(): void {
     nav.classList.add("expanded");
 }
 
-nav = document.getElementById("navbar");
+const nav = document.getElementById("navbar");
 
 nav.addEventListener("show.bs.collapse", navbarExpand);
 nav.addEventListener("hide.bs.collapse", navbarCollapse);

@@ -1,42 +1,35 @@
+@import "https://use.typekit.net/eyh1bcv.css";
+@import "https://use.typekit.net/evz5dus.css";
 .primary-blue-primary {
   color: #0c1b60;
 }
-
 .primary-red-primary {
   color: #6b1010;
 }
-
 .btn-nav-toggle-default {
   color: white;
 }
-
 .btn-nav-toggle-hover {
   color: white;
 }
-
 .btn-nav-toggle-focus {
   color: #faf8f8;
 }
-
 .nav-bg-0_9 {
   color: rgba(255, 255, 255, 0.9);
 }
-
 .nav-bg-0_97 {
   color: rgba(255, 255, 255, 0.97);
 }
-
 .nav-bg-0_975 {
   color: rgba(255, 255, 255, 0.975);
 }
-
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 /* Remove default margin */
 body,
 h1,
@@ -50,37 +43,31 @@ dl,
 dd {
   margin: 0;
 }
-
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role=list],
 ol[role=list] {
   list-style: none;
 }
-
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
-
 /* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
-
 /* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -88,7 +75,6 @@ textarea,
 select {
   font: inherit;
 }
-
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -103,6 +89,12 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+h1 {
+  font-family: "Arpona" !important;
+}
+p {
+  font-family: "ballinger-mono" !important;
 }
 /*  =================
     Table of Contents
@@ -230,31 +222,119 @@ nav.navbar-scrolled .container-fluid.secondary {
     height: 0;
   }
 }
-
 /*  ======
     Footer
     ====== */
 footer img {
-  max-width: 15vw;
+  max-width: 30%;
   display: block;
   margin: auto 0;
 }
-
+@media (min-width: 768px) {
+  footer img {
+    max-width: 70%;
+  }
+}
+.grid-alt {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: repeat(2, 1fr);
+  /* > img {
+    grid-column-start: 1;
+  }
+  > img:nth-child(4n - 1) {
+    grid-column-start: 2;
+    filter: blur(5px);
+  }
+  > div:nth-child(4n) {
+    grid-column-start: 1;
+    color: red;
+  } */
+}
+.grid-alt img:nth-child(1) {
+  order: 1;
+}
+.grid-alt div:nth-child(2) {
+  order: 2;
+}
+.grid-alt img:nth-child(2) {
+  order: 2;
+}
+.grid-alt div:nth-child(3) {
+  order: 3;
+}
+.grid-alt img:nth-child(3) {
+  order: 3;
+}
+.grid-alt div:nth-child(4) {
+  order: 4;
+}
+.grid-alt img:nth-child(3) {
+  order: 4;
+}
+.grid-alt div:nth-child(4) {
+  order: 3;
+}
+.grid-alt img:nth-child(4) {
+  order: 4;
+}
+.grid-alt div:nth-child(5) {
+  order: 5;
+}
+.grid-alt img:nth-child(5) {
+  order: 5;
+}
+.grid-alt div:nth-child(6) {
+  order: 6;
+}
+.grid-alt img:nth-child(6) {
+  order: 6;
+}
+.grid-alt div:nth-child(7) {
+  order: 7;
+}
+.grid-alt img:nth-child(7) {
+  order: 7;
+}
+.grid-alt div:nth-child(8) {
+  order: 8;
+}
+.grid-alt img:nth-child(7) {
+  order: 8;
+}
+.grid-alt div:nth-child(8) {
+  order: 7;
+}
+.grid-alt img:nth-child(8) {
+  order: 8;
+}
+.grid-alt div:nth-child(9) {
+  order: 9;
+}
+.grid-alt img:nth-child(9) {
+  order: 9;
+}
+.grid-alt div:nth-child(10) {
+  order: 10;
+}
+.grid-alt img:nth-child(10) {
+  order: 10;
+}
+.grid-alt div:nth-child(11) {
+  order: 11;
+}
 .btn-outline-primary {
   color: #0c1b60;
   border-color: #0c1b60;
 }
-
 .btn-outline-primary {
   color: #0c1b60;
   border-color: #0c1b60;
 }
-
 .btn-outline-primary:hover {
   background-color: #0c1b60;
   border-color: #0c1b60;
 }
-
 .btn-outline-primary:focus {
   box-shadow: 0 0 0 0.25rem rgba(12, 27, 96, 0.5);
 }

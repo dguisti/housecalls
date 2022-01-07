@@ -1,0 +1,14 @@
+@use "sass:map";
+@use "../abstracts/fonts" as *;
+@use "../abstracts/functions" as *;
+
+$font-h1: get-font(headings, h1, 100); // map.get(map.get($fonts, h1), 100);
+$font-default-article: get-font(default, article, 100);
+
+h1 {
+  font-family: $font-h1 !important;
+}
+
+p {
+  font-family: $font-default-article !important;
+}

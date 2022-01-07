@@ -219,8 +219,11 @@ footer img {
   // Footer logo image styles
 
   // Limit size
-  max-width: 15vw;
+  max-width: 30%;
 
+  @include mq-md() {
+    max-width: 70%;
+  }
   // Center horizontally
   display: block;
   margin: auto 0;
