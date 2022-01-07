@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "housecallsbeta",
     "public": "public",
     "ignore": [
       "firebase.json",
