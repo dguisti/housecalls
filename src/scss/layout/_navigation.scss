@@ -1,13 +1,27 @@
 @use "../abstracts/colors" as *;
 @use "../abstracts/mixins" as *;
 @use "../abstracts/vars" as *;
+
 /*  =================
     Table of Contents
     ================= 
 
     1. Variables
       1.1 Nav variables
+        1.1a Logo
+        1.1b Border styles
+        1.1c Animations
+        1.1d Padding
+        1.1e Height
     2. Navbar
+      2.1 Root styles
+      2.2 Container style
+        2.2a Primary
+        2.2b Secondary
+      2.3 Styles after scroll
+        2.3a General containers
+        2.3b Primary container
+        2.3c Secondary container
     3. Footer
 
    */
@@ -23,6 +37,7 @@ $logo-height: 60px;
 
 // Border styles
 $nav-border: 1px solid lightgray;
+$nav-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
 
 // Animations
 $nav-transition: 0.4s ease-in-out;
@@ -159,30 +174,35 @@ nav {
   }
 
   &.navbar-scrolled {
+    /* Styles after use has scrolled */
+
     @include mq-lg() {
-      box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+      // Nav root styles large screen sizes
+      box-shadow: $nav-shadow;
       background-color: $colors-nav-bg-0_97;
     }
 
     .container-fluid {
       &.primary {
         /* Primary (bottom) container */
-        @include mq-lg() {
-        }
         .navlogo-primary {
           @include mq-lg() {
+            // Make primary logo appear
             height: $logo-height;
           }
         }
 
         .dropdown-menu {
+          // Decrease dropdown transparency
           background-color: $colors-nav-bg-0_97;
         }
       }
 
       &.secondary {
         /* Secondary (top) container */
+
         @include mq-lg() {
+          // Hide secondary navbar on large screens
           border-width: 0;
           height: 0;
         }
@@ -196,7 +216,12 @@ nav {
     ====== */
 
 footer img {
+  // Footer logo image styles
+
+  // Limit size
   max-width: 15vw;
+
+  // Center horizontally
   display: block;
   margin: auto 0;
 }

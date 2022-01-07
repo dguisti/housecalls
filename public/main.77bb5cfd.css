@@ -110,7 +110,20 @@ select {
 
     1. Variables
       1.1 Nav variables
+        1.1a Logo
+        1.1b Border styles
+        1.1c Animations
+        1.1d Padding
+        1.1e Height
     2. Navbar
+      2.1 Root styles
+      2.2 Container style
+        2.2a Primary
+        2.2b Secondary
+      2.3 Styles after scroll
+        2.3a General containers
+        2.3b Primary container
+        2.3c Secondary container
     3. Footer
 
    */
@@ -187,6 +200,9 @@ nav .container-fluid.secondary .navbar-toggler:focus {
 nav.expanded .container-fluid.secondary {
   /* Secondary (top) container */
   border-bottom: 1px solid lightgray;
+}
+nav.navbar-scrolled {
+  /* Styles after use has scrolled */
 }
 @media (min-width: 992px) {
   nav.navbar-scrolled {
