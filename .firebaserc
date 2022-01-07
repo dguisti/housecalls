@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "dalling"
+  },
+  "targets": {
+    "dalling": {
+      "hosting": {
+        "housecallsbeta": [
+          "housecallsbeta"
+        ]
+      }
+    }
   }
 }
