@@ -1,17 +1,25 @@
 {
   "name": "housecalls",
   "version": "1.0.0",
-  "description": "Official website for House Calls Ltd.",
-  "main": "public/index.html",
+  "description": "House Calls website source code",
+  "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html --out-dir public",
-    "build": "parcel build src/index.html --out-dir public"
+    "dev": "parcel src/index.html --dist-dir public",
+    "build": "parcel build src/index.html --dist-dir public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dguisti/housecalls.git"
   },
   "keywords": [],
-  "author": "Dallin Guisti",
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dguisti/housecalls/issues"
+  },
+  "homepage": "https://github.com/dguisti/housecalls#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
-    "sass": "^1.46.0"
+    "@parcel/transformer-sass": "^2.1.1",
+    "parcel": "^2.1.1"
   }
 }

@@ -67,3 +67,4 @@ node_modules/
 
 # npm modules
 node_modules
+.parcel-cache

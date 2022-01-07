@@ -5,12 +5,12 @@ html {
 
 #cover {
   /* The image used */
-  background-image: url("../../img/home/cover.webp");
+  background-image: url("cover.4b38d89a.webp");
   background-attachment: fixed;
-
   /* Full size and config */
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+/*# sourceMappingURL=index.2f212905.css.map */
