@@ -1,32 +1,25 @@
+@use "../abstracts/mixins" as *;
 .grid-alt {
   display: grid;
   gap: 1.5em;
-  grid-template-columns: repeat(2, 1fr);
-  @for $n from 1 through 10 {
-    img:nth-child(#{$n}) {
-      order: $n;
-    }
-    div:nth-child(#{$n + 1}) {
-      order: $n + 1;
-    }
-    @if (($n + 5) % 4) == 0 {
+  grid-template-columns: 1fr;
+  @include mq-lg() {
+    grid-template-columns: repeat(2, 1fr);
+    @for $n from 1 through 10 {
       img:nth-child(#{$n}) {
-        order: $n + 1;
-      }
-      div:nth-child(#{$n + 1}) {
         order: $n;
       }
+      div:nth-child(#{$n + 1}) {
+        order: $n + 1;
+      }
+      @if (($n + 5) % 4) == 0 {
+        img:nth-child(#{$n}) {
+          order: $n + 1;
+        }
+        div:nth-child(#{$n + 1}) {
+          order: $n;
+        }
+      }
     }
   }
-  /* > img {
-    grid-column-start: 1;
-  }
-  > img:nth-child(4n - 1) {
-    grid-column-start: 2;
-    filter: blur(5px);
-  }
-  > div:nth-child(4n) {
-    grid-column-start: 1;
-    color: red;
-  } */
 }
