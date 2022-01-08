@@ -15,7 +15,7 @@ function navbarExpand(): void {
     nav.classList.add("expanded");
 }
 
-const nav = document.getElementById("navbar");
+var nav:Element = document.getElementById("navbar");
 
 nav.addEventListener("show.bs.collapse", navbarExpand);
 nav.addEventListener("hide.bs.collapse", navbarCollapse);

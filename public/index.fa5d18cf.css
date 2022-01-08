@@ -1,27 +1,31 @@
 @import "https://use.typekit.net/eyh1bcv.css";
 @import "https://use.typekit.net/evz5dus.css";
-.primary-blue-primary {
+@charset "UTF-8";
+.color-primary-blue-primary {
   color: #0c1b60;
 }
-.primary-red-primary {
+.color-primary-blue-a1 {
+  color: #142fac;
+}
+.color-primary-red-primary {
   color: #6b1010;
 }
-.btn-nav-toggle-default {
+.color-btn-nav-toggle-default {
   color: white;
 }
-.btn-nav-toggle-hover {
+.color-btn-nav-toggle-hover {
   color: white;
 }
-.btn-nav-toggle-focus {
+.color-btn-nav-toggle-focus {
   color: #faf8f8;
 }
-.nav-bg-0_9 {
+.color-nav-bg-0_9 {
   color: rgba(255, 255, 255, 0.9);
 }
-.nav-bg-0_97 {
+.color-nav-bg-0_97 {
   color: rgba(255, 255, 255, 0.97);
 }
-.nav-bg-0_975 {
+.color-nav-bg-0_975 {
   color: rgba(255, 255, 255, 0.975);
 }
 /* Box sizing rules */
@@ -95,6 +99,12 @@ h1 {
 }
 p {
   font-family: "ballinger-mono" !important;
+}
+h3 a {
+  color: #0c1b60;
+}
+h3 a:hover {
+  color: #142fac;
 }
 /*  =================
     Table of Contents
@@ -240,6 +250,26 @@ footer img {
   gap: 1.5em;
   grid-template-columns: 1fr;
 }
+.grid-alt .grid-alt-text {
+  height: 100%;
+  position: relative;
+}
+.grid-alt .grid-alt-text > a {
+  font-size: 2em;
+  font-weight: 900;
+  color: #0c1b60;
+  text-decoration: none;
+  transition: transform 0.4s ease-in-out;
+  display: block;
+  width: 2em;
+  float: right;
+}
+.grid-alt .grid-alt-text > a::after {
+  content: "❯";
+}
+.grid-alt .grid-alt-text > a:hover {
+  transform: translateX(5px);
+}
 @media (min-width: 992px) {
   .grid-alt {
     grid-template-columns: repeat(2, 1fr);
@@ -267,6 +297,15 @@ footer img {
   }
   .grid-alt div:nth-child(4) {
     order: 3;
+  }
+  .grid-alt div:nth-child(4) > a {
+    float: left;
+  }
+  .grid-alt div:nth-child(4) > a::after {
+    content: "❮";
+  }
+  .grid-alt div:nth-child(4) > a:hover {
+    transform: translateX(-5px);
   }
   .grid-alt img:nth-child(4) {
     order: 4;
@@ -297,6 +336,15 @@ footer img {
   }
   .grid-alt div:nth-child(8) {
     order: 7;
+  }
+  .grid-alt div:nth-child(8) > a {
+    float: left;
+  }
+  .grid-alt div:nth-child(8) > a::after {
+    content: "❮";
+  }
+  .grid-alt div:nth-child(8) > a:hover {
+    transform: translateX(-5px);
   }
   .grid-alt img:nth-child(8) {
     order: 8;

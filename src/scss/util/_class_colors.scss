@@ -3,7 +3,7 @@
 @each $category, $list-colors in $colors {
   @each $color, $list-shades in $list-colors {
     @each $shade, $value in $list-shades {
-      .#{$category}-#{"" + $color}-#{$shade} {
+      .color-#{$category}-#{"" + $color}-#{$shade} {
         color: $value;
       }
     }
