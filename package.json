@@ -4,8 +4,9 @@
   "description": "House Calls website source code",
   "source": "src/index.html",
   "scripts": {
-    "dev": "parcel src/index.html --dist-dir public",
-    "build": "parcel build src/index.html --dist-dir public"
+    "watch": "parcel watch src/index.html src/404.html --dist-dir public",
+    "dev": "parcel src/index.html src/404.html --dist-dir public",
+    "build": "parcel build src/index.html src/404.html --dist-dir public"
   },
   "repository": {
     "type": "git",

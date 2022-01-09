@@ -365,6 +365,14 @@ footer img {
     order: 11;
   }
 }
+.cover {
+  background-attachment: fixed;
+  /* Full size and config */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .btn-outline-primary {
   color: #0c1b60;
   border-color: #0c1b60;

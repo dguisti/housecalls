@@ -3,14 +3,6 @@ html {
   height: 100%;
 }
 
-#cover {
-  /* The image used */
+.cover {
   background-image: url("../../img/home/cover.webp");
-  background-attachment: fixed;
-
-  /* Full size and config */
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
