@@ -1,6 +1,6 @@
-@use "../abstracts/colors" as *;
-@use "../abstracts/mixins" as *;
-@use "../abstracts/vars" as *;
+@use "../abstracts/colors"as *;
+@use "../abstracts/mixins"as *;
+@use "../abstracts/vars"as *;
 
 /*  =================
     Table of Contents
@@ -49,7 +49,7 @@ $nav-padding-secondary: 7px;
 
 // Height
 $nav-height-primary: auto;
-$nav-height-secondary: $logo-height + $nav-padding-secondary * 2;
+$nav-height-secondary: $logo-height+$nav-padding-secondary * 2;
 
 /*  ======
     Navbar
@@ -74,6 +74,7 @@ nav {
   }
 
   .container-fluid {
+
     // Fluid containers (top and bottom nav bars)
     &.primary {
       /* --- Primary (bottom) container --- */
@@ -184,6 +185,7 @@ nav {
 
     .container-fluid {
       &.primary {
+
         /* Primary (bottom) container */
         .navlogo-primary {
           @include mq-lg() {
@@ -224,6 +226,7 @@ footer img {
   @include mq-md() {
     max-width: 70%;
   }
+
   // Center horizontally
   display: block;
   margin: auto 0;
